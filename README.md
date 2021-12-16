@@ -19,6 +19,6 @@ Read it at your own risk.
 			)): G.add_edge((r, c), e)
 	# check weight here instead of assign while adding edge
 	weight_func = lambda u,v,d: maps[v[0]][v[1]]
-	res = nx.dijkstra_path(G, (0, 0), (w-1, h-1), weight=weight_func)
+	res = nx.dijkstra_path(G, (0, 0), (h-1, w-1), weight=weight_func)
 	print(reduce(lambda acc, p: acc+maps[p[0]][p[1]], res[1:], 0))
 	```
